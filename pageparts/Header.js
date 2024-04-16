@@ -57,7 +57,7 @@ function Header(props) {
             <Link
               variant="button"
               color="#ffffff"
-              href="about"
+              href="/about"
               sx={{ my: 1, mx: 1.5 }}
               style={{ textDecoration: 'none' }}
             >
