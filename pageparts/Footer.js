@@ -44,7 +44,7 @@ export default function Footer() {
       >
         <Container justifycontent
         >
-          <Typography variant="body1">
+          <Typography sx={{ fontWeight: "bold" }} color="#444444">
             Nakazuba
           </Typography>
           <Copyright />

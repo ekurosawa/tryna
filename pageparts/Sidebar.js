@@ -24,7 +24,7 @@ export default function Sidebar(props) {
 
     
       {archives.map(({archive, title, url}, ) => (
-        <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none' }}>
+        <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none', color: "black" }}>
           {title}
         </Link>
       ))}

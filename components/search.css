@@ -2,6 +2,7 @@
 .search{
     display: flex;
     justify-content: right;
+    color: #000000;
 }
 .search__bar{
     display: flex;
