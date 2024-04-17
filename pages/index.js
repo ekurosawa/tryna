@@ -84,9 +84,14 @@ export default function Home({ allPostsData }) {
             <Box>
               <Typography
                 className={NSJ.className}
-                variant="h4"
                 align="center"
-                sx={{ color: "#1a1a1a", mb: 1 }}>
+                sx={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  fontSize: 44,
+                  color: "#212121",
+                  mb: 1
+                }}>
                 記事一覧
               </Typography>
             </Box>
@@ -141,7 +146,7 @@ export default function Home({ allPostsData }) {
           description={sidebar.description}
           archives={sidebar.archives}
           social={sidebar.social}
-                    />
+        />
       </Container>
       <Footer></Footer>
     </ThemeProvider>

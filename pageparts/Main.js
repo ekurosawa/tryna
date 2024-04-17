@@ -22,7 +22,6 @@ export default function Main(props) {
       <Typography py={4}>
         {title}
       </Typography>
-      <Divider />
     </Grid>
   );
 }

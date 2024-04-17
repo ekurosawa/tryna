@@ -64,10 +64,8 @@ function Header(props) {
               ABOUT
             </Link>
           </nav>
-
         </Toolbar>
       </AppBar>
-
     </React.Fragment>
   );
 }
