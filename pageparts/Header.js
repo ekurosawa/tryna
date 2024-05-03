@@ -12,7 +12,16 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { pink } from '@mui/material/colors';
+import { DocSearch } from '@docsearch/react';
 
+{/*0503 */ }
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch } from 'react-instantsearch';
+
+import Search from '../components/search';
+
+const searchClient = algoliasearch('HRST160B7P', 'ce9fc76ff0661c1d8a523e4d26a97e66');
+{/** */ }
 
 function Header(props) {
   return (
@@ -23,18 +32,20 @@ function Header(props) {
       <AppBar
         position="fixed"
         elevation={1}
-        sx={{backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{ backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link 
-          fontStyle="bold"
-          variant="h5" 
-          color="inherit" 
-          noWrap sx={{ flexGrow: 1 }} 
-          href="/" 
-          style={{ textDecoration: 'none' }}>
+          <div>
+          <Link
+            fontStyle="bold"
+            variant="h5"
+            color="inherit"
+            noWrap sx={{ flexGrow: 1 }}
+            href="/"
+            style={{ textDecoration: 'none' }}>
             Nakazuba
           </Link>
+          </div>
           <nav>
             <Link
               variant="button"
@@ -63,12 +74,34 @@ function Header(props) {
             >
               ABOUT
             </Link>
+
+
+            {/*0502 
+            <div class="ais-InstantSearch">
+              <h1>InstantSearch.js e-commerce demo</h1>
+
+              <div class="left-panel">
+                <div id="clear-refinements"></div>
+
+
+              </div>
+            </div>
+            */}
+
+            <div>
+              <Search/>
+            </div>
+
+
           </nav>
         </Toolbar>
       </AppBar>
     </React.Fragment>
   );
 }
+
+
+
 
 Header.propTypes = {
   sections: PropTypes.arrayOf(

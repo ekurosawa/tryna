@@ -2,7 +2,7 @@ import Header from '../../pageparts/Header';
 import Main from '../../pageparts/Main';
 import Sidebar from '../../pageparts/Sidebar';
 import Footer from '../../pageparts/Footer';
-
+import ShareButtons from "../../pageparts/ShareButtons";
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
@@ -27,6 +27,7 @@ import { Link, Typography } from '@mui/material';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
 
+
 const defaultTheme = createTheme();
 
 export default function Post({ postData }) {
@@ -37,6 +38,8 @@ export default function Post({ postData }) {
 
         <Header></Header>
 
+        {/*<ShareButtons></ShareButtons>*/}
+        
         <title>{postData.title}</title>
         <Box sx={{ backgroundColor: "aliceblue" }}>
           <Card>
