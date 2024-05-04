@@ -11,8 +11,6 @@ import AppBar from '@mui/material/AppBar';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { pink } from '@mui/material/colors';
-import { DocSearch } from '@docsearch/react';
 
 {/*0503 */ }
 import algoliasearch from 'algoliasearch/lite';
@@ -27,15 +25,14 @@ function Header(props) {
   return (
     <React.Fragment>
       <link rel="icon" href="/favi.ico" />
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+      {/*<GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />*/}
       <CssBaseline />
       <AppBar
-        position="fixed"
-        elevation={1}
-        sx={{ backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{ 
+          backgroundColor: "#00bfff", 
+      }}
       >
-        <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <div>
+        <Toolbar>
           <Link
             fontStyle="bold"
             variant="h5"
@@ -45,7 +42,6 @@ function Header(props) {
             style={{ textDecoration: 'none' }}>
             Nakazuba
           </Link>
-          </div>
           <nav>
             <Link
               variant="button"
@@ -74,26 +70,12 @@ function Header(props) {
             >
               ABOUT
             </Link>
+            
+            </nav>
 
 
-            {/*0502 
-            <div class="ais-InstantSearch">
-              <h1>InstantSearch.js e-commerce demo</h1>
-
-              <div class="left-panel">
-                <div id="clear-refinements"></div>
-
-
-              </div>
-            </div>
-            */}
-
-            <div>
-              <Search/>
-            </div>
-
-
-          </nav>
+          <Search />
+          
         </Toolbar>
       </AppBar>
     </React.Fragment>

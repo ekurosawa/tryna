@@ -31,6 +31,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 import { Noto_Sans_JP } from "next/font/google";
 
+import {generateIndex} from "../lib/algolia";
+
 const NSJ = Noto_Sans_JP({
   weight: "400",
   subsets: ["latin"],
@@ -65,12 +67,16 @@ const sidebar = {
   ],
 };
 
-const darkTheme = createTheme();
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
 
 
 export default function Home({ allPostsData }) {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <CssBaseline />
 
       <Container fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
@@ -169,6 +175,7 @@ function Copyright() {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  await generateIndex();
   return {
     props: {
       allPostsData,

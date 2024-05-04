@@ -3,6 +3,9 @@ import { hitComponent } from './HitComponent';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
 
+import 'instantsearch.css/themes/satellite-min.css';
+import "@/styles/algolia.css";
+
 export default function Search() {
     const algoliaClient = algoliasearch(
         process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID || '',
@@ -35,7 +38,8 @@ export default function Search() {
         <div>
         <InstantSearch indexName={indexName} searchClient={searchClient}>
           <SearchBox />
-          <Hits hitComponent={hitComponent} />
+          <Hits sx={{my: 2}}
+          hitComponent={hitComponent} />
         </InstantSearch>
       </div>
     );

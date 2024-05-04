@@ -21,16 +21,20 @@ interface HitComponentProps extends Props {
 }
 */}
 
-function HitComponent({ hit }){
+function HitComponent({ hit }) {
   return (
-    <div>
-      <Link href={hit.url}>
-        <a className="hover:text-[#06bbbc]">{hit.title}</a>
-      </Link>
+<div>
+    <Link
+      href={hit.url}
+      color="#000000"
+      sx={{ my: -2, mx: 1.5 }}
+      style={{ textDecoration: 'none' }}>
+      <a>{hit.title}</a>
+    </Link>
     </div>
   );
 }
 
-export const hitComponent = ({ hit })=> (
+export const hitComponent = ({ hit }) => (
   <HitComponent hit={hit} onClick={() => null} />
 );

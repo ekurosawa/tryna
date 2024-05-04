@@ -8,7 +8,6 @@ import Link from '@mui/material/Link';
 import Search from "../components/search";
 import Toolber from "@mui/material/Toolbar";
 import Appbar from "@mui/material/AppBar";
-import { DocSearch } from '@docsearch/react';
 
 function Copyright() {
   return (
@@ -51,9 +50,7 @@ export default function Footer() {
           <Copyright />
         </Container>
         <Container >
-          <div className='search'>
-            
-          </div>
+
         </Container>
       </Appbar>
     </ThemeProvider>

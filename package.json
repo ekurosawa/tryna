@@ -22,6 +22,7 @@
     "dayjs": "^1.11.10",
     "gray-matter": "^4.0.3",
     "image-size": "^1.1.1",
+    "instantsearch.css": "^8.1.0",
     "instantsearch.js": "^4.68.0",
     "markdown-to-jsx": "^7.4.7",
     "next": "14.2.1",

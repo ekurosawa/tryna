@@ -17,7 +17,6 @@ body {
 }
 
 a {
-  color: #0070f3;
   text-decoration: none;
 }
 
@@ -32,7 +31,6 @@ img {
 p {
   text-indent: 0rem;
 }
-
 
 h1,h2,h3,h5,h6  {
   border-left:5px solid #24b2dd;

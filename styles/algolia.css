@@ -1,0 +1,12 @@
+.ais-SearchBox-form {
+    background-color: transparent;
+}
+
+.ais-SearchBox-input {
+
+    box-shadow: none;
+}
+
+.ais-SearchBox-resetIcon path {
+    fill: red,
+  }
