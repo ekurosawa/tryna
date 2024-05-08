@@ -24,7 +24,7 @@ export const ShareButtons = ({ urlBlog, title, tooltipPlacement }) => {
           _hover={{ fill: "teal.500" }}
         />
       </TwitterShareButton>
-      <FacebookShareButton url={url}>
+      <FacebookShareButton url={url} title={title} via={FACEBOOK_ID}>
         <Icon
           as={FaFacebook}
           boxSize={6}
@@ -32,7 +32,7 @@ export const ShareButtons = ({ urlBlog, title, tooltipPlacement }) => {
           _hover={{ fill: "teal.500" }}
         />
       </FacebookShareButton>
-      <LineShareButton title={title} url={url}>
+      <LineShareButton url={url} title={title} via={LINESHARE_ID}>
         <Icon
           as={FaLine}
           boxSize={6}

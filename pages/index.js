@@ -31,7 +31,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 import { Noto_Sans_JP } from "next/font/google";
 
-import {generateIndex} from "../lib/algolia";
+import { generateIndex } from "../lib/algolia";
+import { LineIcon } from 'react-share';
 
 const NSJ = Noto_Sans_JP({
   weight: "400",
@@ -64,6 +65,8 @@ const sidebar = {
   ],
   social: [
     { name: 'Twitter', icon: TwitterIcon },
+    { name: 'Facebook', icon: FacebookIcon },
+    { name: 'Line', icon: LineIcon },
   ],
 };
 

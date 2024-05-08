@@ -1,1 +1,5 @@
 env. ファイルに注意
+https://fwywd.com/tech/next-env
+
+algolia
+https://fwywd.com/tech/next-algolia
