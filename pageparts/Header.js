@@ -37,7 +37,8 @@ function Header(props) {
             fontStyle="bold"
             variant="h5"
             color="inherit"
-            noWrap sx={{ flexGrow: 1 }}
+            noWrap 
+            sx={{ flexGrow: 1 }}
             href="/"
             style={{ textDecoration: 'none' }}>
             Nakazuba

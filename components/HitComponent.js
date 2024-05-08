@@ -1,5 +1,3 @@
-// src/components/common/HitComponent
-
 import Link from '@mui/material/Link';
 import { Hit } from 'react-instantsearch-core';
 
