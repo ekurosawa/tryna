@@ -9,6 +9,9 @@ import Link from 'next/link';
 const name = 'nakazuba';
 export const siteTitle = 'nakazuba';
 
+
+
+
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>

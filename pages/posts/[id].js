@@ -29,6 +29,29 @@ import { Link, Typography } from '@mui/material';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
 
+export const metadata = {
+  openGraph: {
+    title: 'Next.js',
+    description: 'The React Framework for the Web',
+    url: 'https://nextjs.org',
+    siteName: 'Next.js',
+    images: [
+      {
+        url: 'https://ne-fa.vercel.app/images/hig_2.jpg', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://ne-fa.vercel.app/images/hig_2.jpg', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
 const defaultTheme = createTheme();
 
@@ -36,6 +59,7 @@ export default function Post({ postData }) {
   return (
 
     <ThemeProvider theme={defaultTheme}>
+      {/*
       <Helmet
         title={postData.title}
         meta={[
@@ -45,7 +69,9 @@ export default function Post({ postData }) {
           { property: "og:image", content: postData.thumbNa },
           { name: "twitter:card", content: 'summary' },
           { name: 'twitter:site', content: '@akameco' },
+          { name: 'twitter:image', content: postData.thumbNa }
         ]}/>
+      */}
 
       <link rel="icon" href="favi.ico" />
 
