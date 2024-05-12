@@ -2,10 +2,11 @@ import Header from '../../pageparts/Header';
 import Main from '../../pageparts/Main';
 import Sidebar from '../../pageparts/Sidebar';
 import Footer from '../../pageparts/Footer';
-import ShareButtons from "../../pageparts/ShareButtons";
+import Share from "../../pageparts/Share";
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import Hero from "@mui/material";
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import markdownToHtml from '../../lib/markdownToHtml';
@@ -20,6 +21,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
+import { Helmet } from 'react-helmet';
 
 import Image from 'next/image';
 import { Link, Typography } from '@mui/material';
@@ -32,14 +34,25 @@ const defaultTheme = createTheme();
 
 export default function Post({ postData }) {
   return (
+
     <ThemeProvider theme={defaultTheme}>
+      <Helmet
+        title={postData.title}
+        meta={[
+          { name: "description", content: "説明" },
+          { property: "og:url", content: `https://ne-fa.vercel.app/posts/${postData.id}` },
+          { property: "og:title", content: postData.title },
+          { property: "og:image", content: postData.thumbNa },
+          { name: "twitter:card", content: 'summary' },
+          { name: 'twitter:site', content: '@akameco' },
+        ]}/>
+
       <link rel="icon" href="favi.ico" />
+
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
         <Header></Header>
 
-        {/*<ShareButtons></ShareButtons>*/}
-        
         <title>{postData.title}</title>
         <Box sx={{ backgroundColor: "aliceblue" }}>
           <Card>
@@ -50,7 +63,8 @@ export default function Post({ postData }) {
               height={270} />
           </Card>
 
-          <Box justifyContent="space-between" display="flex">
+          <Box
+            justifyContent="space-between" display="flex">
             <Typography
               py={1}
               sx={{
@@ -60,7 +74,6 @@ export default function Post({ postData }) {
               }}>
               {postData.date}
             </Typography>
-
             <Typography
               py={1}>
               {postData.tag.map((val) =>
@@ -88,14 +101,20 @@ export default function Post({ postData }) {
             {postData.title}
           </Typography>
 
-          <Typography
-            sx={{
-              fontSize: 16, textAlign: "right"
-            }} color="text.secondary" >
-            {postData.writer}
-          </Typography>
+          <Box justifyContent="space-between" display="flex" verticalAlign="bottom">
+            <Share
+              url={`https://ne-fa.vercel.app/posts/${postData.id}`}
+              title={postData.title}
+            />
+            <Typography
+              sx={{
+                fontSize: 19, textAlign: "right", verticalAlign: "top", color: "text.secondary"
+              }}  >
+              {postData.writer}
+            </Typography>
+          </Box>
 
-          <Box textAlign="left">
+          <Box>
             <div
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />

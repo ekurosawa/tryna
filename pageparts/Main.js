@@ -10,13 +10,7 @@ export default function Main(props) {
 
   return (
     <Grid
-      item
-      xs={12}
-      md={8}
-      sx={{
-        '& .markdown': {
-        py: 3
-        },
+      item xs={12} md={8} sx={{'& .markdown': {py: 3},
       }}
     >
       <Typography py={4}>

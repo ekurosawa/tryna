@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-
+import Head from 'next/head';
 import AppBar from '@mui/material/AppBar';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
@@ -23,14 +23,14 @@ const searchClient = algoliasearch('HRST160B7P', 'ce9fc76ff0661c1d8a523e4d26a97e
 function Header(props) {
   return (
     <React.Fragment>
-      <link rel="icon" href="/favi.ico" />
+
       {/*<GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />*/}
       <CssBaseline />
       <AppBar
         sx={{
+          position: "static",
           backgroundColor: "#00bfff",
-        }}
-      >
+        }}>
         <Toolbar
           sx={{ flexWrap: 'wrap' }}>
           <Link

@@ -11,7 +11,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Container from '@mui/material/Container';
 
 
-
 export default function Sidebar(props) {
   const { archives, description, social, title } = props;
 
@@ -24,11 +23,19 @@ export default function Sidebar(props) {
         </Typography>
 
         {archives.map(({ archive, title, url },) => (
-          <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none', color: "black" }}>
+          <Link 
+          display="block" 
+          variant="body1" 
+          href={archives.url} 
+          key={title} 
+          style={{ textDecoration: 'none', color: "black" 
+          }}>
             {title}
           </Link>
         ))}
 
+
+{/*
         <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
           Social
         </Typography>
@@ -60,13 +67,11 @@ export default function Sidebar(props) {
               </Card>
             </Grid>
           ))}
-        </Grid>
+        </Grid>*/}
       </Grid>
     </Container>
   );
 }
-
-
 
 
 Sidebar.propTypes = {
@@ -85,5 +90,3 @@ Sidebar.propTypes = {
   ).isRequired,
   title: PropTypes.string.isRequired,
 };
-
-

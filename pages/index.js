@@ -24,6 +24,7 @@ import Header from '../pageparts/Header';
 import Main from '../pageparts/Main';
 import Sidebar from '../pageparts/Sidebar';
 import Footer from '../pageparts/Footer';
+import Share from '../pageparts/Share';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -147,15 +148,18 @@ export default function Home({ allPostsData }) {
             </Grid>
           </Container>
         </Grid>
+
         <Box
           sx={{ pb: 10 }}
         ></Box>
-        <Sidebar
+
+        <Share
           title={sidebar.title}
           description={sidebar.description}
           archives={sidebar.archives}
           social={sidebar.social}
         />
+
       </Container>
       <Footer></Footer>
     </ThemeProvider>
