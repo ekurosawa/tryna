@@ -43,7 +43,6 @@ const NSJ = Noto_Sans_JP({
 const posts = ['   '];
 
 const sections = [
-
   { title: 'Design', url: '#' },
   { title: 'Culture', url: '#' },
   { title: 'Business', url: '#' },

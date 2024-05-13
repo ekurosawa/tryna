@@ -9,8 +9,31 @@ import Link from 'next/link';
 const name = 'nakazuba';
 export const siteTitle = 'nakazuba';
 
+const metadata = {
+  openGraph: {
+  title: 'Next.js',
+  description: 'The React Framework for the Web',
+  url: ``
+  ,
+  siteName: 'Next.js',
+  images: [
+    {
+      url: 'https://ne-fa.vercel.app/images/hig_2.jpg', // Must be an absolute URL
+      width: 800,
+      height: 600,
+    },
+    {
+      url: 'https://ne-fa.vercel.app/images/hig_2.jpg', // Must be an absolute URL
+      width: 1800,
+      height: 1600,
+      alt: 'My custom alt',
+    },
+  ],
+  locale: 'en_US',
+  type: 'website',
+},
 
-
+}
 
 export default function Layout({ children, home }) {
   return (

@@ -10,7 +10,6 @@ import Hero from "@mui/material";
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import markdownToHtml from '../../lib/markdownToHtml';
-
 import styles from '../../components/layout.module.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -29,29 +28,7 @@ import { Link, Typography } from '@mui/material';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
 
-export const metadata = {
-  openGraph: {
-    title: 'Next.js',
-    description: 'The React Framework for the Web',
-    url: 'https://nextjs.org',
-    siteName: 'Next.js',
-    images: [
-      {
-        url: 'https://ne-fa.vercel.app/images/hig_2.jpg', // Must be an absolute URL
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://ne-fa.vercel.app/images/hig_2.jpg', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-}
+
 
 const defaultTheme = createTheme();
 
@@ -77,7 +54,12 @@ export default function Post({ postData }) {
 
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
-        <Header></Header>
+        <Header><head>
+<meta property="og:title" content="Nakazuba" />
+<meta property="og:type" content="kiji" />
+<meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
+<meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
+</head></Header>
 
         <title>{postData.title}</title>
         <Box sx={{ backgroundColor: "aliceblue" }}>
@@ -129,8 +111,8 @@ export default function Post({ postData }) {
 
           <Box justifyContent="space-between" display="flex" verticalAlign="bottom">
             <Share
-              url={`https://ne-fa.vercel.app/posts/${postData.id}`}
               title={postData.title}
+              url={`https://ne-fa.vercel.app/posts/${postData.id}`}
             />
             <Typography
               sx={{

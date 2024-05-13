@@ -23,7 +23,6 @@ const searchClient = algoliasearch('HRST160B7P', 'ce9fc76ff0661c1d8a523e4d26a97e
 function Header(props) {
   return (
     <React.Fragment>
-
       {/*<GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />*/}
       <CssBaseline />
       <AppBar
