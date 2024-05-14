@@ -1,7 +1,7 @@
 import { MultipleQueriesQuery } from '@algolia/client-search';
 import { hitComponent } from './HitComponent';
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+import { InstantSearch, SearchBox, Hits,PoweredBy } from 'react-instantsearch-dom';
 
 import 'instantsearch.css/themes/satellite-min.css';
 import "@/styles/algolia.css";
@@ -40,6 +40,8 @@ export default function Search() {
           <SearchBox />
           <Hits sx={{my: 2}}
           hitComponent={hitComponent} />
+              <PoweredBy />
+
         </InstantSearch>
       </div>
     );
