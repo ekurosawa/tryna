@@ -5,7 +5,6 @@ writer: "柿本 建"
 thumbNa: /images/562752.png
 tag: ["食事", "料理"]
 ---
-
 こーじちゅー。。
 
 <!--
