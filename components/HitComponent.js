@@ -1,5 +1,6 @@
 import Link from '@mui/material/Link';
 import { Hit } from 'react-instantsearch-core';
+import { Hits, connectSearchBox, Pagination, Highlight, PoweredBy } from 'react-instantsearch-dom';
 
 {/*
 interface HitDoc {
