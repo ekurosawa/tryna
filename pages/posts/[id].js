@@ -54,12 +54,14 @@ export default function Post({ postData }) {
 
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
-        <Header><head>
-<meta property="og:title" content="Nakazuba" />
-<meta property="og:type" content="kiji" />
-<meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
-<meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
-</head></Header>
+        <Header>
+          <head>
+            <meta property="og:title" content="Nakazuba" />
+            <meta property="og:type" content="kiji" />
+            <meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
+            <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
+          </head>
+        </Header>
 
         <title>{postData.title}</title>
         <Box sx={{ backgroundColor: "aliceblue" }}>

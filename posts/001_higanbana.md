@@ -7,8 +7,11 @@ tag: ["散歩", "花"]
 direction: va
 ---
 
-![Alt text](/images/hig_1.jpg)
+こーじちゅー。。
 
+<!--
+
+![Alt text](/images/hig_1.jpg)
 
 ヒガンバナ。
 

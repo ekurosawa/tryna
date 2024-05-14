@@ -29,7 +29,8 @@ function HitComponent({ hit }) {
       style={{ textDecoration: 'none' }}>
       <a>{hit.title}</a>
     </Link>
-    </div>
+    <PoweredBy />
+    </div>    
   );
 }
 
