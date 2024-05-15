@@ -56,8 +56,7 @@ function Header(props) {
             color="#ffffff"
             href="/serialization"
             sx={{ my: 1, mx: 1.5 }}
-            style={{ textDecoration: 'none' }}
-          >
+            style={{ textDecoration: 'none' }}>
             SERIALIZATION
           </Link>
           <Link
@@ -65,8 +64,7 @@ function Header(props) {
             color="#ffffff"
             href="/about"
             sx={{ my: 1, mx: 1.5 }}
-            style={{ textDecoration: 'none' }}
-          >
+            style={{ textDecoration: 'none' }}>
             ABOUT
           </Link>
 

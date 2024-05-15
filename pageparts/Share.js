@@ -14,6 +14,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 
+
 const Wrapper = styled.div`
     display: flex;
     padding-bottom: 24px;
@@ -27,6 +28,13 @@ const ButtonWrapper = styled.div`
 const Share = ({ title, url }) => {
     return (
         <Wrapper>
+            <meta property="og:title" content="Nakazuba" />
+            <meta property="og:type" content="kiji" />
+            <meta property="og:url" content="https://ne-fa.vercel.app/posts/${postData.id}" />
+            <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@nytimesbits" />
+            <meta name="twitter:creator" content="@nickbilton" />
             <ButtonWrapper>
                 <TwitterShareButton url={url} title={title} via="Nakazuba" >
                     <XIcon size={40} round />
