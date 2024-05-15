@@ -34,14 +34,8 @@ const defaultTheme = createTheme();
 
 export default function Post({ postData }) {
   return (
+
     <ThemeProvider theme={defaultTheme}>
-      <meta property="og:title" content="Nakazuba" />
-      <meta property="og:type" content="kiji" />
-      <meta property="og:url" content="https://ne-fa.vercel.app/posts/${postData.id}" />
-      <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@nytimesbits" />
-      <meta name="twitter:creator" content="@nickbilton" />
       {/*
       <Helmet
         title={postData.title}
@@ -60,7 +54,19 @@ export default function Post({ postData }) {
 
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
-        <Header></Header>
+        <Header>
+          <head>
+            
+            <meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
+            <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
+            <meta name="twitter:card" content="summary"/>
+            <meta name="twitter:site" content="@nytimesbits" />
+            <meta name="twitter:creator" content="@nickbilton" />
+            <meta property="og:type" content="kiji" />
+            <meta property="og:title" content="Nakazuba" />
+
+          </head>
+        </Header>
 
         <title>{postData.title}</title>
         <Box sx={{ backgroundColor: "aliceblue" }}>
@@ -111,13 +117,10 @@ export default function Post({ postData }) {
           </Typography>
 
           <Box justifyContent="space-between" display="flex" verticalAlign="bottom">
-            {/*<Share
+            <Share
               title={postData.title}
               url={`https://ne-fa.vercel.app/posts/${postData.id}`}
-          />*/}
-
-            <Share />
-
+            />
             <Typography
               sx={{
                 fontSize: 19, textAlign: "right", verticalAlign: "top", color: "text.secondary"
