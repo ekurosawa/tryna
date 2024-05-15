@@ -36,8 +36,6 @@ import { generateIndex } from "../lib/algolia";
 import { LineIcon } from 'react-share';
 
 
-import Search from '../components/search';
-
 
 
 const NSJ = Noto_Sans_JP({
@@ -93,8 +91,6 @@ export default function Home({ allPostsData }) {
         <Header></Header>
         <Main></Main>
 
-
-        <Search />
         
 
         <Grid container spacing={5} sx={{ mt: 2 }}>

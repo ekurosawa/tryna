@@ -36,6 +36,19 @@ export default function Post({ postData }) {
   return (
 
     <ThemeProvider theme={defaultTheme}>
+
+      <Head>
+
+        <meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
+        <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@nytimesbits" />
+        <meta name="twitter:creator" content="@nickbilton" />
+        <meta property="og:type" content="kiji" />
+        <meta property="og:title" content="Nakazuba" />
+
+      </Head>
+      
       {/*
       <Helmet
         title={postData.title}
@@ -55,17 +68,7 @@ export default function Post({ postData }) {
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
         <Header>
-          <head>
-            
-            <meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
-            <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
-            <meta name="twitter:card" content="summary"/>
-            <meta name="twitter:site" content="@nytimesbits" />
-            <meta name="twitter:creator" content="@nickbilton" />
-            <meta property="og:type" content="kiji" />
-            <meta property="og:title" content="Nakazuba" />
 
-          </head>
         </Header>
 
         <title>{postData.title}</title>
