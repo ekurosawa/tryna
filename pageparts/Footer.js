@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import Search from "../components/search";
+import Search from "../components/Search";
 import Toolber from "@mui/material/Toolbar";
 import Appbar from "@mui/material/AppBar";
 

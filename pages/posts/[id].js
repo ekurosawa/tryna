@@ -39,16 +39,16 @@ export default function Post({ postData }) {
 
       <Head>
 
-        <meta property="og:url" content="https://ne-fa.vercel.app/posts/015_stollen" />
-        <meta property="og:image" content="https://ne-fa.vercel.app/images/sto_10.jpg" />
+        <meta property="og:url" content={`https://ne-fa.vercel.app/posts/${postData.id}`} />
+        <meta property="og:image" content={postData.thumbNa} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@nytimesbits" />
-        <meta name="twitter:creator" content="@nickbilton" />
+        <meta name="twitter:site" content="@F4sant" />
+        <meta name="twitter:creator" content="@nakazuba" />
         <meta property="og:type" content="kiji" />
         <meta property="og:title" content="Nakazuba" />
 
       </Head>
-      
+
       {/*
       <Helmet
         title={postData.title}
