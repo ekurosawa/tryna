@@ -3,3 +3,7 @@ https://fwywd.com/tech/next-env
 
 algolia
 https://fwywd.com/tech/next-algolia
+
+
+by 6月月次 書類類提出、ブログ実装完了
+    8月月次　書類類完成

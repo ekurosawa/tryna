@@ -16,7 +16,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch } from 'react-instantsearch';
 
-import Search from "../components/Search";
+import Search from "../components/search";
 
 const searchClient = algoliasearch('HRST160B7P', 'ce9fc76ff0661c1d8a523e4d26a97e66');
 
