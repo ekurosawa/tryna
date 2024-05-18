@@ -38,15 +38,14 @@ export default function Post({ postData }) {
     <ThemeProvider theme={defaultTheme}>
 
       <Head>
-
-        <meta property="og:url" content={`https://ne-fa.vercel.app/posts/${postData.id}`} />
-        <meta property="og:image" content={postData.thumbNa} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@F4sant" />
         <meta name="twitter:creator" content="@nakazuba" />
-        <meta property="og:type" content="kiji" />
+        <meta property="og:url" content={`https://ne-fa.vercel.app/posts/${postData.id}`} />
         <meta property="og:title" content="Nakazuba" />
-
+        <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
+        <meta property="og:type" content="kiji" />
+        <meta property="og:image" content={postData.thumbNa} />
       </Head>
 
       {/*
