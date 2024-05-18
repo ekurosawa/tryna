@@ -6,7 +6,7 @@ import { InstantSearch, SearchBox, Hits,PoweredBy } from 'react-instantsearch-do
 import 'instantsearch.css/themes/satellite-min.css';
 import "@/styles/algolia.css";
 
-function Search() {
+export default function Search() {
     const algoliaClient = algoliasearch(
         process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID || '',
         process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY || '',
