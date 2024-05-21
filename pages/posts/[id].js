@@ -119,10 +119,13 @@ export default function Post({ postData }) {
           </Typography>
 
           <Box justifyContent="space-between" display="flex" verticalAlign="bottom">
+
             <Share
               title={postData.title}
               url={`https://ne-fa.vercel.app/posts/${postData.id}`}
+              image={postData.thumNa}
             />
+
             <Typography
               sx={{
                 fontSize: 19, textAlign: "right", verticalAlign: "top", color: "text.secondary"
