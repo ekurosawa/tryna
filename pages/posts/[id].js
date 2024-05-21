@@ -45,7 +45,7 @@ export default function Post({ postData }) {
         <meta property="og:title" content="Nakazuba" />
         <meta property="og:description" content={postData.description} />
         <meta property="og:type" content="kiji" />
-        <meta property="og:image" content={`https://ne-fa.vercel.app/images/na.png`} />
+        <meta property="og:image" content="https://ne-fa.vercel.app/images/na.png" />
       </Head>
 
       {/*

@@ -23,6 +23,7 @@ import Header from '../pageparts/Header';
 import Main from '../pageparts/Main';
 import Sidebar from '../pageparts/Sidebar';
 import Footer from '../pageparts/Footer';
+import Image from 'next/image';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -48,6 +49,7 @@ export default function serialization() {
             <CssBaseline />
 
             <Header></Header>
+
             <Main></Main>
             <Typography sx={{
                 py: 37,
@@ -55,6 +57,11 @@ export default function serialization() {
             }}>
                 siriailaze-shon
             </Typography>
+
+            <div
+              >
+                <img src="./public/na.png" alt="logo" />
+            </div>
 
             <Footer></Footer>
         </ThemeProvider>
