@@ -45,7 +45,7 @@ export default function Post({ postData }) {
         <meta property="og:title" content={postData.title} />
         <meta property="og:description" content={postData.description} />
         <meta property="og:type" content="kiji" />
-        <meta property="og:image" content={`https://ne-fa.vercel.app/public${postData.thumbNa}`} />
+        <meta property="og:image" content={`https://ne-fa.vercel.app/public/${postData.thumbNa}`} />
       </Head>
 
       {/*
@@ -123,7 +123,7 @@ export default function Post({ postData }) {
             <Share
               title={postData.title}
               url={`https://ne-fa.vercel.app/posts/${postData.id}`}
-              image={`https://ne-fa.vercel.app/public${postData.thumbNa}`}
+              image={`https://ne-fa.vercel.app/public/${postData.thumbNa}`}
             />
 
             <Typography
