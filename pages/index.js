@@ -36,8 +36,6 @@ import { generateIndex } from "../lib/algolia";
 import { LineIcon } from 'react-share';
 
 
-
-
 const NSJ = Noto_Sans_JP({
   weight: "400",
   subsets: ["latin"],
@@ -80,7 +78,7 @@ const lightTheme = createTheme({
 });
 
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, blog, monthlyIndex }) {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
@@ -90,8 +88,6 @@ export default function Home({ allPostsData }) {
 
         <Header></Header>
         <Main></Main>
-
-        
 
         <Grid container spacing={5} sx={{ mt: 2 }}>
           <Container maxWidth="lg">
@@ -127,8 +123,7 @@ export default function Home({ allPostsData }) {
                       sx={{
                         // 16:9 4:3
                         pt: '75%',
-                        backgroundColor: "#FFFFFF"
-                      }}
+                        backgroundColor: "#FFFFFF"}}
                       image={thumbNa}
                       alt="image"
                       href={`/posts/${id}`}
@@ -163,7 +158,6 @@ export default function Home({ allPostsData }) {
           archives={sidebar.archives}
           social={sidebar.social}
         />
-
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -187,9 +181,21 @@ function Copyright() {
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   await generateIndex();
+
+  {/*
+  // "blog" のコンテンツを全件取得
+  const data = await client.get({
+    endpoint: "blog",
+    queries: { fields: "publishedAt", limit: 3000 },
+  });
+  const monthlyIndex = groupBy(data.contents);
+*/}
+
   return {
     props: {
       allPostsData,
+
+
     },
   };
 }

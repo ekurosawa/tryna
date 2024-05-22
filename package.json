@@ -19,7 +19,7 @@
     "@mui/material": "^5.15.15",
     "@react-icons/all-files": "^4.1.0",
     "date-fns": "^3.6.0",
-    "dayjs": "^1.11.10",
+    "dayjs": "^1.11.11",
     "gray-matter": "^4.0.3",
     "image-size": "^1.1.1",
     "instantsearch.css": "^8.1.0",
