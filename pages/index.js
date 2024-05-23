@@ -38,7 +38,6 @@ import { LineIcon } from 'react-share';
 import { client } from "../lib/client";
 
 
-
 const NSJ = Noto_Sans_JP({
   weight: "400",
   subsets: ["latin"],
@@ -152,9 +151,11 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
           </Container>
         </Grid>
 
+
         <Box
           sx={{ pb: 10 }}
         ></Box>
+            
 
         <Share
           title={sidebar.title}
@@ -211,10 +212,7 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData,
-
       blog: data.contents,
-
-
     },
   };
 }

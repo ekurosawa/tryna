@@ -42,7 +42,6 @@ export default function Tag({ postData, tag }) {
           <Container maxWidth="lg">
             <Typography
               component="h1"
-              variant="h4"
               align="center"
               sx={{ color: "#1a1a1a" }}
               marginBottom={4}>

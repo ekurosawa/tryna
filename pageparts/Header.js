@@ -27,7 +27,7 @@ function Header(props) {
       <CssBaseline />
       <AppBar
         sx={{
-          position: "static",
+          position: "flex",
           backgroundColor: "#00bfff",
         }}>
         <Toolbar
