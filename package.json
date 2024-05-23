@@ -25,6 +25,7 @@
     "instantsearch.css": "^8.1.0",
     "instantsearch.js": "^4.68.0",
     "markdown-to-jsx": "^7.4.7",
+    "microcms-js-sdk": "^3.1.1",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",

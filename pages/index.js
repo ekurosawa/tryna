@@ -35,6 +35,9 @@ import { Noto_Sans_JP } from "next/font/google";
 import { generateIndex } from "../lib/algolia";
 import { LineIcon } from 'react-share';
 
+import { client } from "../lib/client";
+
+
 
 const NSJ = Noto_Sans_JP({
   weight: "400",
@@ -123,7 +126,8 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
                       sx={{
                         // 16:9 4:3
                         pt: '75%',
-                        backgroundColor: "#FFFFFF"}}
+                        backgroundColor: "#FFFFFF"
+                      }}
                       image={thumbNa}
                       alt="image"
                       href={`/posts/${id}`}
@@ -158,6 +162,17 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
           archives={sidebar.archives}
           social={sidebar.social}
         />
+
+        <div>
+          <ul>
+            {blog.map((blog) => (
+              <li key={blog.id}>
+                <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -182,18 +197,22 @@ export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   await generateIndex();
 
-  {/*
+
+  // データをテンプレートに受け渡す部分の処理を記述します
   // "blog" のコンテンツを全件取得
   const data = await client.get({
     endpoint: "blog",
-    queries: { fields: "publishedAt", limit: 3000 },
+    queries: { fields: "publishedAt"},
   });
-  const monthlyIndex = groupBy(data.contents);
+  {/*const monthlyIndex = groupBy(data.contents);
 */}
+
 
   return {
     props: {
       allPostsData,
+
+      blog: data.contents,
 
 
     },
