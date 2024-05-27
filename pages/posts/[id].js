@@ -34,9 +34,7 @@ const defaultTheme = createTheme();
 
 export default function Post({ postData }) {
   return (
-
     <ThemeProvider theme={defaultTheme}>
-
       <Head>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@F4sant" />
@@ -53,30 +51,9 @@ export default function Post({ postData }) {
               <meta property="og:image" content={`https://ne-fa.vercel.app/${postData.thumbNa}`} />
 
 */}
-
-      {/*
-      <Helmet
-        title={postData.title}
-        meta={[
-          { name: "description", content: "説明" },
-          { property: "og:url", content: `https://ne-fa.vercel.app/posts/${postData.id}` },
-          { property: "og:title", content: postData.title },
-          { property: "og:image", content: postData.thumbNa },
-          { name: "twitter:card", content: 'summary' },
-          { name: 'twitter:site', content: '@akameco' },
-          { name: 'twitter:image', content: postData.thumbNa }
-        ]}/>
-      */}
-
-      <link rel="icon" href="favi.ico" />
-
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
-
-        <Header>
-
-        </Header>
-
-        <title>{postData.title}</title>
+        <Header></Header>
+        <Main></Main>
         <Box sx={{ backgroundColor: "aliceblue" }}>
           <Card>
             <CardMedia

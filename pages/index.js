@@ -28,7 +28,7 @@ import Share from '../pageparts/Share';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/Twitter';
 
 import { Noto_Sans_JP } from "next/font/google";
 
@@ -57,21 +57,23 @@ const sections = [
   { title: 'Travel', url: '#' },
 ];
 
+
 const sidebar = {
-  title: 'hororo',
+  title: 'About',
   description:
-    'kekekekekekekekekekekekekekekekekekekekkekekekekekekkekekekekekekekke',
+    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
   archives: [
-    { title: 'Nov 2023', url: '#' },
-    { title: 'Oct 2023', url: '#' },
+    { title: 'Nov 2023', url: '/nov2023' },
+    { title: 'Oct 2023', url: '/oct2023' },
 
   ],
   social: [
-    { name: 'Twitter', icon: TwitterIcon },
+    { name: 'GitHub', icon: GitHubIcon },
+    { name: 'X', icon: XIcon },
     { name: 'Facebook', icon: FacebookIcon },
-    { name: 'Line', icon: LineIcon },
   ],
 };
+
 
 const lightTheme = createTheme({
   palette: {
@@ -84,7 +86,6 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
-
       <Container fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
         <link rel="icon" href='/images/nakazuba40white.png' />
 
@@ -157,23 +158,20 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
         ></Box>
             
 
-        <Share
+        <Sidebar
           title={sidebar.title}
           description={sidebar.description}
-          archives={sidebar.archives}
-          social={sidebar.social}
+          archives={sidebar.archives}          
         />
-
-        <div>
-          <ul>
+{/*
+        <Typography>          
             {blog.map((blog) => (
               <li key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
               </li>
-            ))}
-          </ul>
-        </div>
-
+            ))}          
+          </Typography>
+          */}
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -215,7 +213,7 @@ export async function getStaticProps() {
       blog: data.contents,
     },
   };
-}
+};
 
 
 

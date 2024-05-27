@@ -11,68 +11,45 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Container from '@mui/material/Container';
 
 
-export default function Sidebar(props) {
+function Sidebar(props) {
   const { archives, description, social, title } = props;
 
   return (
-    <Container maxWidth="lg">
-      <Grid sx={{ py: 6 }} item xs={12} md={4}>
-
-        <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-          Archives
+    <Grid item xs={12} md={4}>
+      <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
+        <Typography variant="h6" gutterBottom>
+          {title}
         </Typography>
-
-        {archives.map(({ archive, title, url },) => (
-          <Link 
-          display="block" 
-          variant="body1" 
-          href={archives.url} 
-          key={title} 
-          style={{ textDecoration: 'none', color: "black" 
-          }}>
-            {title}
-          </Link>
-        ))}
-
-
-{/*
-        <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-          Social
-        </Typography>
-
-        <Grid
-          container spacing={4}>
-          {social.map((network, name, key) => (
-            <Grid item key={network.name} xs={12} sm={6} md={4}>
-              <Card sx={{
-                aspectRatio: 1 / 0.3,
-                alignItems: "center",
-                justifyContent: 'center',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <Link
-                  display="block"
-                  variant="body1"
-                  href="#"
-                  key={network.name}
-                  sx={{ mb: 0.5 }}
-                  style={{ textDecoration: 'none' }}
-                >
-                  <Stack direction="row" spacing={1} alignItems="center">
-                    <network.icon />
-                    <span>{network.name}</span>
-                  </Stack>
-                </Link>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>*/}
-      </Grid>
-    </Container>
+        <Typography>{description}</Typography>
+      </Paper>
+      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+        Archives
+      </Typography>
+      {archives.map((archive) => (
+        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
+          {archive.title}
+        </Link>
+      ))}
+      {/*<Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+        Social
+      </Typography>
+      {social.map((network) => (
+        <Link
+          display="block"
+          variant="body1"
+          href="#"
+          key={network.name}
+          sx={{ mb: 0.5 }}
+        >
+          <Stack direction="row" spacing={1} alignItems="center">
+            <network.icon />
+            <span>{network.name}</span>
+          </Stack>
+        </Link>
+      ))}*/}
+    </Grid>
   );
 }
-
 
 Sidebar.propTypes = {
   archives: PropTypes.arrayOf(
@@ -90,3 +67,5 @@ Sidebar.propTypes = {
   ).isRequired,
   title: PropTypes.string.isRequired,
 };
+
+export default Sidebar;

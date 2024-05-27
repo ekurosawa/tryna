@@ -1,13 +1,13 @@
-import { getAllTags, getSortedPostsData } from "../../lib/posts";
-import Layout from "../../components/layout";
+import { getAllTags, getSortedPostsData } from "../lib/posts";
+import Layout from "../components/layout";
 import Link from "next/link";
 import Head from "next/head";
-import Date from "../../components/date";
+import Date from "../components/date";
 
-import Header from '../../pageparts/Header';
-import Main from '../../pageparts/Main';
-import Sidebar from '../../pageparts/Sidebar';
-import Footer from '../../pageparts/Footer';
+import Header from '../pageparts/Header';
+import Main from '../pageparts/Main';
+import Sidebar from '../pageparts/Sidebar';
+import Footer from '../pageparts/Footer';
 
 import {
   Box,
@@ -22,25 +22,43 @@ import {
   Typography
 } from "@mui/material";
 
-const darkTheme = createTheme();
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
-export default function Tag({ postData, tag }) {
+export default function nov2024({ postData, tag }) {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
 
-      <Container  sx={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
+      <Container fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
+
         <Header></Header>
         <Main></Main>
 
+
         <Grid container item spacing={5} sx={{ mt: 2, mb: 0, pb: 1 }}>
-          <Container textAlign="ce" maxWidth="lg">
+          <Container maxWidth="lg">
+            <Typography>
+              <Link
+                variant="button"
+                color="#ffffff"
+                href="/writers"
+                sx={{ my: 1, mx: 1.5 }}
+                style={{ textDecoration: 'none' }}
+              >
+              </Link>
+            </Typography>
+
+
+            {/*
             <Typography
-                sx={{
-                  textAlign: "center",
-                  fontSize: 40,
-                  color: "#212121",
-                }}>
+              component="h1"
+              align="center"
+              sx={{ color: "#1a1a1a" }}
+              marginBottom={4}>
               #{tag}
             </Typography>
 
@@ -56,8 +74,8 @@ export default function Tag({ postData, tag }) {
                     sx={{ display: 'flex', flexDirection: 'column' }}
                   >
                     <CardContent sx={{ flex: '10 auto' }} >
-                      <Box px={2} sx={{ pt: 1 }} color='aliceblue' display="flex" justifyContent="space-between">
-                        <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold" >
+                      <Box px={2} sx={{ pt: 1 }} color='inherit' display="flex" justifyContent="space-between">
+                        <Typography color="aliceblue" fontSize={17} fontWeight="Bold"  >
                           {title}
                         </Typography >
                         <Typography
@@ -65,7 +83,7 @@ export default function Tag({ postData, tag }) {
                           sx={{
                             fontSize: 18,
                             fontWeight: "bold",
-                            color: "#1a1a1a"
+                            color: "aliceblue"
                           }}>
                           {date}
                         </Typography>
@@ -75,6 +93,7 @@ export default function Tag({ postData, tag }) {
                 </Grid>
               ))}
             </Grid>
+            */}
           </Container>
         </Grid>
       </Container>

@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+      <Container component="main" maxWidth="sm">
       </Container>
       <Appbar
         component="footer"

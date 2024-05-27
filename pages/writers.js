@@ -75,7 +75,6 @@ export default function writers() {
                 <link rel="icon" href='/images/nakazuba40white.png' />
 
                 <Header></Header>
-
                 <Main></Main>
 
                 <Grid container item spacing={5} sx={{ mt: 2, mb: 0, pb: 1 }}>
@@ -83,8 +82,8 @@ export default function writers() {
                         <Typography align="center"
                             sx={{
                                 textAlign: "center",
-                                fontWeight: "bold",
-                                fontSize: 44,
+                                fontWeight: "",
+                                fontSize: 35,
                                 color: "#212121",
                                 mb: 1
                             }}>

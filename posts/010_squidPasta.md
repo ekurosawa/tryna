@@ -6,7 +6,7 @@ thumbNa: /images/562752.png
 tag: ["食事", "料理"]
 description: "私はイカが好きです。イカソーメン、さきいか、から揚げ、刺身、いかのおすしまで。"
 ---
-こーじちゅー。。
+工事中。
 
 <!--
 ![Alt text](/images/sq-ls_1.png)
