@@ -1,11 +1,12 @@
 import * as React from "react"
 import { Dialog, Transition } from "@headlessui/react"
-import SearchIcon from "./searchIcon"
 import { useState, Fragment } from "react"
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Typography } from "@mui/material"
 import Modal from "@mui/material/Modal"
+import Search from "./search"
+import SearchIcon from "./searchIcon"
 
 const style = {
   position: 'absolute',
@@ -36,8 +37,7 @@ export default function SearchForm() {
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
+          aria-describedby="modal-modal-description">
 
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -46,6 +46,10 @@ export default function SearchForm() {
 
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               hogehogehoge
+            </Typography>
+
+            <Typography>
+              <Search />
             </Typography>
 
           </Box>

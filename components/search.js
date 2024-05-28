@@ -5,6 +5,7 @@ import { InstantSearch, SearchBox, Hits, PoweredBy, Configure } from 'react-inst
 
 import 'instantsearch.css/themes/satellite-min.css';
 import "@/styles/algolia.css";
+import SearchResult from './searchresult';
 
 export default function Search() {
   const algoliaClient = algoliasearch(
@@ -39,8 +40,9 @@ export default function Search() {
       <InstantSearch indexName={indexName} searchClient={searchClient}>
         <Configure hitsPerPage={5} />
         <SearchBox />
-        <Hits sx={{ my: 2 }}
-          hitComponent={hitComponent} />
+      {/*  <Hits sx={{ my: 2 }}
+          hitComponent={hitComponent} />*/}
+          <SearchResult />
         <PoweredBy />
       </InstantSearch>
     </div>
