@@ -7,13 +7,15 @@ import { Typography } from "@mui/material"
 import Modal from "@mui/material/Modal"
 import Search from "./search"
 import SearchIcon from "./searchIcon"
+import { PoweredBy } from "react-instantsearch";
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  height: "60%",
+  width: "60%",
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -37,22 +39,40 @@ export default function SearchForm() {
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description">
+          aria-describedby="modal-modal-description"
+        >
 
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-              記事を検索
-            </Typography>
+            <Box
+              justifyContent="space-between"
+            >
+              <Typography
+                id="modal-modal-title"
+                variant="h6"
+                component="h2">
+                記事を検索
+              </Typography>
+              <Box sx={{
+                pt: 1, width: "42px",
+                marginright: 0,
+                marginleft: "auto",
+              }}>
+                <PoweredBy />
+              </Box>
+            </Box>
+            <Typography id="modal-modal-description" sx={{ mt: 1 }}></Typography>
 
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              hogehogehoge
-            </Typography>
-
-            <Typography>
+            <Typography sx={{
+              pt: "5",
+            }}>
               <Search />
             </Typography>
 
           </Box>
+
+
+
+
         </Modal>
       </div>
     </>

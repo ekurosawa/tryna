@@ -30,10 +30,14 @@ const SearchResult = connectSearchBox(({ refine, currentRefinement }) => {
   if (!isShow) return null;
   return (
     <>
-      <p className="mt-5 text-sm font-semibold tracking-wider text-gray-500">記事一覧</p>
+      {/*<p className="mt-5 text-sm font-semibold tracking-wider text-gray-500">記事一覧</p>*/}
       <Hits hitComponent={hitComponent} />
+      
       <Pagination />
+      {/*
       <PoweredBy />
+      */}
+
     </>
   );
 });
