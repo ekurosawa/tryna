@@ -1,13 +1,13 @@
-import { getAllTags, getSortedPostsData } from "../lib/posts";
-import Layout from "../components/layout";
+import { getAllTags, getSortedPostsData } from "./lib/posts";
+import Layout from "./components/layout";
 import Link from "next/link";
 import Head from "next/head";
-import Date from "../components/date";
+import Date from "./components/date";
 
-import Header from '../pageparts/Header';
-import Main from '../pageparts/Main';
-import Sidebar from '../pageparts/Sidebar';
-import Footer from '../pageparts/Footer';
+import Header from './pageparts/Header';
+import Main from './pageparts/Main';
+import Sidebar from './pageparts/Sidebar';
+import Footer from './pageparts/Footer';
 
 import {
   Box,
