@@ -32,12 +32,11 @@ export default function nov2023({ postData, tag, id }) {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-
-      <Container fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
+      <Container
+        fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
 
         <Header></Header>
         <Main></Main>
-
 
         <Grid container item spacing={5} sx={{ mt: 2, mb: 0, pb: 1 }}>
           <Container maxWidth="lg">
@@ -47,11 +46,9 @@ export default function nov2023({ postData, tag, id }) {
                 color="#ffffff"
                 href={`/001_higanbana`}
                 sx={{ my: 1, mx: 1.5 }}
-                style={{ textDecoration: 'none' }}
-              >
+                style={{ textDecoration: 'none' }}>
               </Link>
             </Typography>
-
 
             {/*
             <Typography
