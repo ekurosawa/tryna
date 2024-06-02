@@ -50,23 +50,22 @@ export default function serialization() {
 
             <Header></Header>
             <Main></Main>
-            
+
             <Typography sx={{
                 py: 37,
                 textAlign: 'center',
             }}>
                 siriailaze-shon
             </Typography>
-{/*
-            <div              >
+            {/*
+            <div>
                 <img src="./public/na.png" alt="logo" />
             </div>
-        */}
+            */}
             <Footer></Footer>
         </ThemeProvider>
     );
 }
-
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();

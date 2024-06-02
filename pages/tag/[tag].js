@@ -59,9 +59,12 @@ export default function Tag({ postData, tag }) {
                       display: 'flex', flexDirection: 'column'
                     }}>
                     <CardContent sx={{ flex: '10 auto' }} >
+
+                      
                       <Box
                         px={2} 
-                        sx={{ pt: 1 }} color='aliceblue' display="flex" justifyContent="space-between">
+                        sx={{ pt: 1 }} color='aliceblue' 
+                        display="flex" justifyContent="space-between">
                         <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold" >
                           {title}
                         </Typography >

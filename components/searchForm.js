@@ -5,8 +5,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Typography } from "@mui/material"
 import Modal from "@mui/material/Modal"
-import Search from "./search"
-import SearchIcon from "./searchIcon"
+import Search from "../components/search"
+import SearchIco from "./searchIcon"
+import SearchIcon from '@mui/icons-material/Search';
 import { PoweredBy } from "react-instantsearch";
 
 const style = {
@@ -34,18 +35,21 @@ export default function SearchForm() {
   return (
     <>
       <div>
-        <button onClick={handleOpen}>Open modal</button>
+        <button
+          onClick={handleOpen}
+          className="flex items-center px-4 py-3 text-sm text-white rounded-full shadow focus:outline-none w-72 hover:bg-[#f1f7f8] hover:text-primary-dark hover:shadow-lg hover:duration-500"
+        >
+          <SearchIcon />          
+        </button>
         <Modal
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-
-          <Box sx={style}>
+          aria-describedby="modal-modal-description">
+          <Box
+            sx={style}>
             <Box
-              justifyContent="space-between"
-            >
+              justifyContent="space-between">
               <Typography
                 id="modal-modal-title"
                 variant="h6"
@@ -67,11 +71,7 @@ export default function SearchForm() {
             }}>
               <Search />
             </Typography>
-
           </Box>
-
-
-
 
         </Modal>
       </div>

@@ -20,6 +20,7 @@ import Search from "../components/search";
 import SearchForm from "../components/searchForm";
 import { Container } from 'postcss';
 
+
 const searchClient = algoliasearch('HRST160B7P', 'ce9fc76ff0661c1d8a523e4d26a97e66');
 
 function Header(props) {
@@ -28,10 +29,11 @@ function Header(props) {
       {/*<GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />*/}
       <CssBaseline />
       <AppBar sx={{
-        position: "flex",
+        position: "fixed",
         backgroundColor: "#00bfff",
       }}>
         <Toolbar sx={{
+          position: "flex",
           paddingTop: "5px"
         }}>
           <Link

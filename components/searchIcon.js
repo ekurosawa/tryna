@@ -1,6 +1,6 @@
 // src/components/icons/SearchIcon.js
 
-function SearchIcon({ w = 6, h = 6 }) {
+function SearchIco({ w = 6, h = 6 }) {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +19,6 @@ function SearchIcon({ w = 6, h = 6 }) {
     );
   }
   
-  export default SearchIcon;
+  export default SearchIco;
   
   

@@ -42,7 +42,7 @@ export default function Post({ postData }) {
         <meta property="og:title" content={postData.title} />
         <meta property="og:description" content={postData.description} />
         <meta property="og:type" content="kiji" />
-        <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
+        <meta property="og:image" content={`https://ne-fa.vercel.app/${postData.thumbNa}`} />
       </Head>
 
       {/*
