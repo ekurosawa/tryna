@@ -11,7 +11,7 @@ import Appbar from "@mui/material/AppBar";
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">
-      {' © '}
+      {'  '}
       {new Date().getFullYear()}
       {'  '}
       <Link sx={{ fontWeight: "bold" }} color="inherit" href="/" style={{ textDecoration: 'none' }}>
@@ -55,7 +55,3 @@ export default function Footer() {
     </ThemeProvider>
   );
 }
-
-
-
-

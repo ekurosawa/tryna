@@ -154,7 +154,7 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
 
 
         <Box
-          sx={{ pb: 10 }}
+          sx={{ pb: 2 }}
         ></Box>
             
 
@@ -182,7 +182,7 @@ export default function Home({ allPostsData, blog, monthlyIndex }) {
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
+      {'Copyright Â© '}
       <Link color="inherit" href="https://mui.com/">
         nakazuba
       </Link>{' '}
@@ -197,8 +197,8 @@ export async function getStaticProps() {
   await generateIndex();
 
 
-  // データをテンプレートに受け渡す部分の処理を記述します
-  // "blog" のコンテンツを全件取得
+  // ãã¼ã¿ããã³ãã¬ã¼ãã«åãæ¸¡ãé¨åã®å¦çãè¨è¿°ãã¾ã
+  // "blog" ã®ã³ã³ãã³ããå¨ä»¶åå¾
   const data = await client.get({
     endpoint: "blog",
     queries: { fields: "publishedAt"},

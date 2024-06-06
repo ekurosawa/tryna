@@ -47,7 +47,7 @@ export default function Tag({ postData, tag }) {
             </Typography>
 
             <Grid
-              container sx={{ mb: 1 }} spacing={1} // containe spacing : アイテム幅の調整
+              container sx={{ mb: 1 }} spacing={1} // containe spacing : ã¢ã¤ãã å¹ã®èª¿æ´
             >
               {postData.map(({ id, date, title }, card) => (
                 <Grid key={card} xs={12} sm={16} md={4} paddingLeft={2.5} paddingY={1}>
