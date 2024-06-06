@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData } from '../lib/posts';
+import { getAllTags, getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 
@@ -35,7 +35,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import { generateIndex } from "../lib/algolia";
 import { LineIcon } from 'react-share';
 
-import { client } from "../lib/client";
+import { client } from "../client";
 
 
 const NSJ = Noto_Sans_JP({
@@ -82,7 +82,7 @@ const lightTheme = createTheme({
 });
 
 
-export default function Home({ allPostsData, blog, monthlyIndex }) {
+export default function Home({ allPostsData, allPosts, allTags  }) {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
@@ -194,23 +194,11 @@ function Copyright() {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  await generateIndex();
-
-
-  // ãã¼ã¿ããã³ãã¬ã¼ãã«åãæ¸¡ãé¨åã®å¦çãè¨è¿°ãã¾ã
-  // "blog" ã®ã³ã³ãã³ããå¨ä»¶åå¾
-  const data = await client.get({
-    endpoint: "blog",
-    queries: { fields: "publishedAt"},
-  });
-  {/*const monthlyIndex = groupBy(data.contents);
-*/}
-
 
   return {
     props: {
       allPostsData,
-      blog: data.contents,
+      allTags: getAllTags()
     },
   };
 };
