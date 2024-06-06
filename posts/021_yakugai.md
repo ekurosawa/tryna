@@ -33,4 +33,7 @@ direction: ho
 - 2002年に和解が成立
 
 
-https://www.torokuhanbaisya.com/%E7%99%BB%E9%8C%B2%E8%B2%A9%E5%A3%B2%E8%80%85%E8%A9%A6%E9%A8%93%E9%A0%BB%E5%87%BA%EF%BC%81%E3%80%80%E8%96%AC%E5%AE%B3%E3%81%AE%E6%AD%B4%E5%8F%B2/
+>
+> <引用元>
+> [登録販売者試験頻出！薬害の歴史
+](https://www.torokuhanbaisya.com/%E7%99%BB%E9%8C%B2%E8%B2%A9%E5%A3%B2%E8%80%85%E8%A9%A6%E9%A8%93%E9%A0%BB%E5%87%BA%EF%BC%81%E3%80%80%E8%96%AC%E5%AE%B3%E3%81%AE%E6%AD%B4%E5%8F%B2/ "登録販売者.com")
