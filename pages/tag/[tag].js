@@ -60,10 +60,9 @@ export default function Tag({ postData, tag }) {
                     }}>
                     <CardContent sx={{ flex: '10 auto' }} >
 
-                      
                       <Box
-                        px={2} 
-                        sx={{ pt: 1 }} color='aliceblue' 
+                        px={2}
+                        sx={{ pt: 1 }} color='aliceblue'
                         display="flex" justifyContent="space-between">
                         <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold" >
                           {title}
@@ -91,31 +90,43 @@ export default function Tag({ postData, tag }) {
   )
 }
 
-export async function getStaticPaths() {
-  const tags = getAllTags();
-  const paths = tags.map((tag) => {
-    return {
-      params: {
-        tag: tag,
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
+{/*----------------------------------------------*/ }
 
 export async function getStaticProps({ params }) {
   const tag = params.tag;
   const allPosts = getSortedPostsData();
   const postData = allPosts.filter((data) => data.tag.includes(tag));
+ 
+  const posts = getPostsByTag(params.tag, [
+    'title',
+    'date',
+    'slug',
+    'tags',
+    'content',
+    'categories',
+  ])
 
   return {
     props: {
-      postData,
-      tag,
+      posts: posts.map(post => ({
+        ...post,
+        category: post.categories ? post.categories[0] : 'diary',
+      })),
+      allTags: getAllTags(),
     },
   };
+}
+
+export async function getStaticPaths() {
+  const tags = getAllTags();
+  return {
+    paths: tags.map((tag) => {
+      return {
+        params: {
+          tag: tag.toLowerCase(),
+        },
+      }
+    }),
+    fallback: false,
+  }
 }
