@@ -29,11 +29,11 @@ function Header(props) {
       {/*<GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />*/}
       <CssBaseline />
       <AppBar sx={{
-        position: "fixed",
+        position: "flex",
         backgroundColor: "#00bfff",
       }}>
         <Toolbar sx={{
-          position: "flex",
+          position: "static",
           paddingTop: "5px"
         }}>
           <Link
@@ -47,6 +47,19 @@ function Header(props) {
             }}>
             Nakazuba
           </Link>
+
+          {/*<Link
+            href="/year"
+            sx={{
+              variant: "button",
+              color: "#ffffff",
+              fontSize: 20,
+              marginRight: 1.5,
+              textDecoration: 'none',
+            }}>
+            ARCHIVE
+          </Link>*/}
+
           <Link
             href="/writers"
             sx={{

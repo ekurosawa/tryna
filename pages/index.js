@@ -22,9 +22,10 @@ import Container from '@mui/material/Container';
 
 import Header from '../pageparts/Header';
 import Main from '../pageparts/Main';
-import Sidebar from '../pageparts/Sidebar';
+{/*import Sidebar from '../Sidebar';*/ }
 import Footer from '../pageparts/Footer';
 import Share from '../pageparts/Share';
+import yearArchive from '../pageparts/yearArchive';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -43,21 +44,7 @@ const NSJ = Noto_Sans_JP({
   subsets: ["latin"],
 })
 
-const posts = ['   '];
-
-const sections = [
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
-
-
+{/*}
 const sidebar = {
   title: 'About',
   description:
@@ -73,7 +60,7 @@ const sidebar = {
     { name: 'Facebook', icon: FacebookIcon },
   ],
 };
-
+*/}
 
 const lightTheme = createTheme({
   palette: {
@@ -82,17 +69,24 @@ const lightTheme = createTheme({
 });
 
 
-export default function Home({ allPostsData, allPosts, allTags  }) {
+export default function Home({ allPostsData, allPosts, allTags }) {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
-      <Container fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
+      <Container
+        sx={{
+          backgroundColor: "aliceblue",
+          display: "grid",
+          gridTemplateRows: "auto 1fr auto",
+          gridTemplateColumns: "100%",
+          minHeight: "100vh"
+        }}>
         <link rel="icon" href='/images/nakazuba40white.png' />
 
         <Header></Header>
         <Main></Main>
 
-        <Grid container spacing={5} sx={{ mt: 2 }}>
+        <Grid container spacing={5} sx={{ mt: 3, mb: 3.5 }}>
           <Container maxWidth="lg">
             <Box>
               <Typography
@@ -152,26 +146,7 @@ export default function Home({ allPostsData, allPosts, allTags  }) {
           </Container>
         </Grid>
 
-
-        <Box
-          sx={{ pb: 2 }}
-        ></Box>
-            
-
-        <Sidebar
-          title={sidebar.title}
-          description={sidebar.description}
-          archives={sidebar.archives}          
-        />
-{/*
-        <Typography>          
-            {blog.map((blog) => (
-              <li key={blog.id}>
-                <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-              </li>
-            ))}          
-          </Typography>
-          */}
+        
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -182,7 +157,7 @@ export default function Home({ allPostsData, allPosts, allTags  }) {
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright Â© '}
+      {'Copyright ÃÂ© '}
       <Link color="inherit" href="https://mui.com/">
         nakazuba
       </Link>{' '}

@@ -1,5 +1,6 @@
 ---
 title: "シュトーレンをつくろう"
+year: ["2023"]
 date: "2023.12.21"
 writer: "黒澤 愛理"
 thumbNa: /images/sto_10.jpg

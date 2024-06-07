@@ -25,7 +25,9 @@ function Copyright() {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Footer({ tags }) {
+export default function Footer({  tags = [], years = [], months = [] }) {
+
+  
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -52,19 +54,6 @@ export default function Footer({ tags }) {
 
         </Container>
       </Appbar>
-
-      <ul>
-          {tags && tags.map((tag) => (
-            <li key={tag} className="tag-label tag-lv-5">
-              <Link href={`/tags/${tag.toLowerCase()}`}>
-                <a>{tag}</a>
-              </Link>
-              {/* TODO: Tag Count */}
-              {/* <var className="count">20</var> */}
-            </li>
-          ))}
-        </ul>
-        
     </ThemeProvider>
   );
 }

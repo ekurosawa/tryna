@@ -1,5 +1,6 @@
 ---
 title: "彼岸花！"
+year: ["2023"]
 date: "2023.10.17"
 writer: "柿本 建"
 thumbNa: /images/hig_2.jpg

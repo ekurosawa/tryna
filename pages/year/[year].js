@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import {
-  getAllTags,
+  getAllYears,
   getSortedPostsData,
 } from "../../lib/posts";
 import Date from "../../components/date";
@@ -25,7 +25,7 @@ import {
 
 const darkTheme = createTheme();
 
-export default function Tag({ postData, tag }) {
+export default function Year({ postData, year }) {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
@@ -42,7 +42,7 @@ export default function Tag({ postData, tag }) {
               fontSize: 40,
               color: "#212121",
             }}>
-              #{tag}
+              {year}
             </Typography>
 
             <Grid
@@ -92,24 +92,24 @@ export default function Tag({ postData, tag }) {
 
 
 export async function getStaticProps({ params }) {
-  const tag = params.tag;
+  const year = params.year;
   const allPosts = getSortedPostsData();
-  const postData = allPosts.filter((data) => data.tag.includes(tag));
+  const postData = allPosts.filter((data) => data.year.includes(year));
 
   return {
     props: {
       postData,
-      tag,
+      year,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const tags = getAllTags();
-  const paths = tags.map((tag) => {
+  const years = getAllYears();
+  const paths = years.map((year) => {
     return {
       params: {
-        tag: tag,
+        year: year,
       },
     };
   });

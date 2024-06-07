@@ -1,5 +1,6 @@
 ---
 title: "ペスカトーレを作りたい！"
+year: ["2023"]
 date: "2023.11.17"
 writer: "柿本 建"
 thumbNa: /images/562752.png

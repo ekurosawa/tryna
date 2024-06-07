@@ -1,5 +1,6 @@
 ---
 title: "キンモクセイ"
+year: ["2023"]
 date: "2023.10.19"
 writer: "英 世志香"
 thumbNa: /images/kin__16.png

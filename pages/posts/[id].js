@@ -1,6 +1,6 @@
 import Header from '../../pageparts/Header';
 import Main from '../../pageparts/Main';
-import Sidebar from '../../pageparts/Sidebar';
+{/*import Sidebar from '../../pageparts/Sidebar';*/}
 import Footer from '../../pageparts/Footer';
 import Share from "../../pageparts/Share";
 import Layout from '../../components/layout';
@@ -28,6 +28,7 @@ import { Helmet } from 'react-helmet';
 import Image from 'next/image';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
+import { Years, Year,years } from'../../lib/yaer'
 
 const defaultTheme = createTheme();
 
@@ -68,14 +69,18 @@ export default function Post({ postData }) {
           <Box
             justifyContent="space-between"
             display="flex">
-            <Typography py={1}
-              sx={{
-                fontSize: 18,
-                fontWeight: "bold",
-                color: "text.secondary"
-              }}>
-              {postData.date}
+            <Typography py={1}>              
+                <Link key={Link} sx={{
+                  fontSize: 18,
+                  fontWeight: "bold",
+                  color: "text.secondary",
+                  textDecoration: 'none'
+                }}
+                  href={`/year/${encodeURIComponent(postData.year)}`}>
+                  {postData.date} {'      '}
+                </Link>              
             </Typography>
+
             <Typography py={1}>
               {postData.tag.map((val) =>
                 <Link key={Link} sx={{
