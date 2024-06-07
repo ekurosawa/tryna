@@ -21,7 +21,7 @@ import Container from '@mui/material/Container';
 
 import Header from '../pageparts/Header';
 import Main from '../pageparts/Main';
-import Sidebar from '../pageparts/Sidebar';
+//import Sidebar from '../pageparts/Sidebar';
 import Footer from '../pageparts/Footer';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
