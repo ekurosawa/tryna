@@ -135,7 +135,7 @@ export default function Post({ postData, allPostsData, allTags }) {
 
 
 <Grid
-  container     >  {/*spacing={4}>      */}
+  container spacing={4}>
   {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
     <Grid item key={card} xs={12} sm={6} md={4}>
       <Card
