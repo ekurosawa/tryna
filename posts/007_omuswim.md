@@ -3,7 +3,7 @@ title: "ただのアルバイトです"
 date: "2023.10.24"
 writer: "英 世志香"
 thumbNa: /images/omu_1.png
-tug: ["文章"]
+tag: ["文章"]
 ---
 
 こーじちゅー。。
