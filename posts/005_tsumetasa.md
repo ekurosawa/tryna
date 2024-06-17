@@ -1,9 +1,10 @@
 ---
 title: "冷たさについて"
+year: ["2023"]
 date: "2023.10.22"
 writer: "白田 一郎"
 thumbNa: /images/tsume_1.png
-tag: [”文章"]
+tag: ["文章"]
 ---
 
 こーじちゅー。。

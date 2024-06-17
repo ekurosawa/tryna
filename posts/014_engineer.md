@@ -1,5 +1,6 @@
 ---
 title: "システムエンジニアって何？職業は？年齢は？身長は？調べてみました！"
+year: ["2023"]
 date: "2023.12.14"
 writer: "乾 洋典"
 thumbNa: /images/sisen_2.png
