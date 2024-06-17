@@ -44,23 +44,6 @@ const NSJ = Noto_Sans_JP({
   subsets: ["latin"],
 })
 
-{/*}
-const sidebar = {
-  title: 'About',
-  description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'Nov 2023', url: '/nov2023' },
-    { title: 'Oct 2023', url: '/oct2023' },
-
-  ],
-  social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'X', icon: XIcon },
-    { name: 'Facebook', icon: FacebookIcon },
-  ],
-};
-*/}
 
 const lightTheme = createTheme({
   palette: {

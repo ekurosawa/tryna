@@ -1,6 +1,6 @@
 import Header from '../../pageparts/Header';
 import Main from '../../pageparts/Main';
-{/*import Sidebar from '../../pageparts/Sidebar';*/}
+{/*import Sidebar from '../../pageparts/Sidebar';*/ }
 import Footer from '../../pageparts/Footer';
 import Share from "../../pageparts/Share";
 import Layout from '../../components/layout';
@@ -28,18 +28,18 @@ import { Helmet } from 'react-helmet';
 import Image from 'next/image';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
-import { Years, Year,years } from'../../lib/yaer'
+import { Years, Year, years } from '../../lib/yaer'
 
 const defaultTheme = createTheme();
 
-export default function Post({ postData }) {
+export default function Post({ postData, allPostsData, allTags }) {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Head>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@F4sant" />
         <meta name="twitter:creator" content="@nakazuba" />
-        <meta property="twitter:image"  content="https://ne-fa.vercel.app/images/na.png" />
+        <meta property="twitter:image" content="https://ne-fa.vercel.app/images/na.png" />
         <meta property="og:url" content={`https://ne-fa.vercel.app/posts/${postData.id}`} />
         <meta property="og:title" content={postData.title} />
         <meta property="og:description" content={postData.description} />
@@ -69,16 +69,16 @@ export default function Post({ postData }) {
           <Box
             justifyContent="space-between"
             display="flex">
-            <Typography py={1}>              
-                <Link key={Link} sx={{
-                  fontSize: 18,
-                  fontWeight: "bold",
-                  color: "text.secondary",
-                  textDecoration: 'none'
-                }}
-                  href={`/year/${encodeURIComponent(postData.year)}`}>
-                  {postData.date} {'      '}
-                </Link>              
+            <Typography py={1}>
+              <Link key={Link} sx={{
+                fontSize: 18,
+                fontWeight: "bold",
+                color: "text.secondary",
+                textDecoration: 'none'
+              }}
+                href={`/year/${encodeURIComponent(postData.year)}`}>
+                {postData.date} {'      '}
+              </Link>
             </Typography>
 
             <Typography py={1}>
@@ -110,10 +110,11 @@ export default function Post({ postData }) {
             <Share
               title={postData.title}
               url={`https://ne-fa.vercel.app/posts/${postData.id}`}
-              image={`https://ne-fa.vercel.app${postData.thumbNa}`}/>
+              image={`https://ne-fa.vercel.app${postData.thumbNa}`} />
 
             <Typography sx={{
-              fontSize: 19, textAlign: "right", verticalAlign: "top", color: "text.secondary" }}>
+              fontSize: 19, textAlign: "right", verticalAlign: "top", color: "text.secondary"
+            }}>
               {postData.writer}
             </Typography>
           </Box>
@@ -130,13 +131,61 @@ export default function Post({ postData }) {
   );
 }
 
+// <Divider />
+
+
+<Grid
+  container spacing={4}>
+  {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
+    <Grid item key={card} xs={12} sm={6} md={4}>
+      <Card
+        component="a"
+        href={`/posts/${id}`}
+        style={{ backgroundColor: "#ffeeff" }}
+        sx={{ aspectRatio: 1 / 1, display: 'flex', flexDirection: 'column' }}
+      >
+        <CardMedia
+          component="div"
+          sx={{
+            // 16:9 4:3
+            pt: '75%',
+            backgroundColor: "#FFFFFF"
+          }}
+          image={thumbNa}
+          alt="image"
+          href={`/posts/${id}`}
+        />
+        <CardContent sx={{ flexGrow: 1 }}>
+          <Box justifyContent="space-between" display="flex">
+            <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
+              {postData.date}
+            </Typography>
+            <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
+              {writer}
+            </Typography>
+          </Box>
+          <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
+            {title}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Grid>
+  ))}
+</Grid>
+        
+
 export async function getStaticProps({ params }) {
   // markdownToHtmlで
   const content = await markdownToHtml(Post.content || '')
   const postData = await getPostData(params.id);
+  const allPostsData = getSortedPostsData();
   return {
     props: {
+      alTags: getAllTags(),
+      allPostsData,
       postData,
+
+
     },
   };
 }
