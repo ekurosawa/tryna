@@ -1,5 +1,6 @@
 ---
 title: "村岡くんの家"
+year: ["2023"]
 date: "2023.11.05"
 writer: "仲島 才希"
 thumbNa: /images/1087771.png

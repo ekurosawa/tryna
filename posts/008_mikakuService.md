@@ -1,5 +1,6 @@
 ---
 title: "食べるとおいしい？"
+year: ["2023"]
 date: "2023.11.03"
 writer: "柿本 建"
 thumbNa: /images/R0019098.png

@@ -1,5 +1,6 @@
 ---
 title: "ただのアルバイトです"
+year: ["2023"]
 date: "2023.10.24"
 writer: "英 世志香"
 thumbNa: /images/omu_1.png
