@@ -3,7 +3,7 @@ title: "キンモクセイ"
 year: ["2023"]
 date: "2023.10.19"
 writer: "英 世志香"
-thumbNa: /images/kin__16.png
+thumbNa: /images/kin_16.png
 description: "夕食の支度をする前に散歩に出かけた。ふと、時間ができたので秋の夕暮れでも見てみようかと思った。"
 tag: ["文章","散歩"]
 ---
