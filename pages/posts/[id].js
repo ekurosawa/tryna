@@ -131,48 +131,6 @@ export default function Post({ postData, allPostsData, allTags }) {
   );
 }
 
-      {/*
-
-
-<Grid
-  container spacing={4}>
-  {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
-    <Grid item key={card} xs={12} sm={6} md={4}>
-      <Card
-        component="a"
-        href={`/posts/${id}`}
-        style={{ backgroundColor: "#ffeeff" }}
-        sx={{ aspectRatio: 1 / 1, display: 'flex', flexDirection: 'column' }}
-      >
-        <CardMedia
-          component="div"
-          sx={{
-            // 16:9 4:3
-            pt: '75%',
-            backgroundColor: "#FFFFFF"
-          }}
-          image={thumbNa}
-          alt="image"
-          href={`/posts/${id}`}
-        />
-        <CardContent sx={{ flexGrow: 1 }}>
-          <Box justifyContent="space-between" display="flex">
-            <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
-              {postData.date}
-            </Typography>
-            <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
-              {writer}
-            </Typography>
-          </Box>
-          <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
-            {title}
-          </Typography>
-        </CardContent>
-      </Card>
-    </Grid>
-  ))}
-</Grid>
-      */}
 
 
 export async function getStaticProps({ params }) {
