@@ -5,6 +5,7 @@ date: "2023.11.05"
 writer: "仲島 才希"
 thumbNa: /images/1087771.png
 tag: ["文章","お別れ"]
+description: "今日は、村岡くんの家へ遊びに行きました。"
 ---
 工事中。
 <!--

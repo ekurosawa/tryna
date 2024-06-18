@@ -5,6 +5,7 @@ date: "2023.12.14"
 writer: "乾 洋典"
 thumbNa: /images/sisen_2.png
 tag: ["SE", "プログラマ", "仕事"]
+description: "「システムエンジニアとかプログラマとか、聞いたことはあるけど、どんなお仕事なのかよくわからないなー。」"
 direction: ho
 ---
 工事中。
