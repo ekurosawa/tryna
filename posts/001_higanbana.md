@@ -3,9 +3,9 @@ title: "彼岸花！"
 year: ["2023"]
 date: "2023.10.17"
 writer: "柿本 建"
-thumbNa: /images/hig_2.jpg"
-tag: ["散歩", "花"]
+thumbNa: /images/hig_2.jpg
 description: "私は９月、埼玉県、日高市にある巾着田にいきました。無論、彼岸花を見るためです。"
+tag: ["散歩", "花"]
 ---
 工事中。
 
