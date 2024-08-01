@@ -137,11 +137,11 @@ export async function getStaticProps({ params }) {
   // markdownToHtmlで
   const content = await markdownToHtml(Post.content || '')
   const postData = await getPostData(params.id);
-  const allPostsData = getSortedPostsData();
+{/*const allPostsData = getSortedPostsData();*/}
   return {
     props: {
-      alTags: getAllTags(),
-      allPostsData,
+     // allTags: getAllTags(),
+      // allPostsData,
       postData,
 
 
