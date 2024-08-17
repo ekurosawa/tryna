@@ -56,6 +56,9 @@ export default function Post({ postData, allPostsData, allTags }) {
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
         <Header></Header>
         <Main></Main>
+
+        <Grid container  sx={{ mt: 3, mb: 3.5 }}>
+
         <Box
           sx={{ backgroundColor: "aliceblue" }}>
           <Card>
@@ -125,6 +128,7 @@ export default function Post({ postData, allPostsData, allTags }) {
           </Box>
         </Box>
         <Box sx={{ height: "15vh" }}></Box>
+        </Grid>
       </Container>
       <Footer></Footer>
     </ThemeProvider >
