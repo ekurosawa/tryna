@@ -9,7 +9,7 @@ tag: ["散歩", "花"]
 ---
 工事中。
 
-<!--
+
 
 ![Alt text](/images/hig_1.jpg)
 
@@ -46,6 +46,7 @@ tag: ["散歩", "花"]
 
 ![Alt text](/images/hig_4.jpg)
 
+<!--
 <style>
 .tate {
   writing-mode: vertical-rl;
