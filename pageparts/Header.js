@@ -60,6 +60,11 @@ function Header(props) {
             ARCHIVE
           </Link>*/}
 
+
+
+
+          
+{/* 
           <Link
             href="/chats"
             sx={{
@@ -72,7 +77,7 @@ function Header(props) {
               コメント
           </Link>
           
-{/* 
+
           <Link
             href="/writers"
             sx={{
