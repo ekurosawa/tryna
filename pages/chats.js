@@ -57,7 +57,14 @@ export default function Home() {
       setMe(meRef.current);
     });
 
-    const room = drone.subscribe('observable-room');
+
+    // りれき
+    const room = drone.subscribe('awesome-historical-room', {
+      historyCount: 5 // ask for the 5 most recent messages from the room's history
+    });
+    room.on('history_message', message => console.log(message));
+
+//rireki 
 
     room.on('message', message => {
       const {data, member} = message;
