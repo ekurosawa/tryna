@@ -130,12 +130,7 @@ export default function Home({ allPostsData, allPosts, allTags }) {
         </Grid>
 
 
-{/*////////////////*/}
 
-<Giscus />
-
-
-{/*////////////////*/}        
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -168,13 +163,6 @@ export async function getStaticProps() {
 };
 
 //////////////////20241026///////////////////////////////////
-
-
-import dynamic from "next/dynamic";
-
-const Giscus = dynamic(() => import("@/app/giscus").then((m) => m.Giscus), {
-  ssr: false,
-});
 
 
 

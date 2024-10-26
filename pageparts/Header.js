@@ -61,6 +61,19 @@ function Header(props) {
           </Link>*/}
 
           <Link
+            href="/chats"
+            sx={{
+              variant: "button",
+              color: "#ffffff",
+              fontSize: 20,
+              marginRight: 1.5,
+              textDecoration: 'none',
+            }}>
+              コメント
+          </Link>
+          
+{/* 
+          <Link
             href="/writers"
             sx={{
               variant: "button",
@@ -93,6 +106,9 @@ function Header(props) {
             }}>
             ABOUT
           </Link>
+
+          */}
+
           <SearchForm />
         </Toolbar>
 

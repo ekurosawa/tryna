@@ -7,6 +7,7 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Toolber from "@mui/material/Toolbar";
 import Appbar from "@mui/material/AppBar";
+import Paper from "@mui/material/Paper"
 
 function Copyright() {
   return (
@@ -43,16 +44,12 @@ export default function Footer({  tags = [], years = [], months = [] }) {
           backgroundColor: "#87cefa"
         }}
       >
-        <Container justifycontent
-        >
+        <Container justifycontent>
           <Typography sx={{ fontWeight: "bold" }} color="#444444">
             Nakazuba
           </Typography>
           <Copyright />
-        </Container>
-        <Container >
-
-        </Container>
+        </Container>        
       </Appbar>
     </ThemeProvider>
   );
