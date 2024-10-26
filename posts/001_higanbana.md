@@ -11,6 +11,84 @@ tag: ["散歩", "花"]
 
 
 
+
+
+
+
+
+
+For twitter:card of type summary, the title, ratings and image will be fetched from the appropriate App Store.
+
+twitter:image
+
+https://ne-fa.vercel.app/images/na.png
+
+twitter:card
+
+summary
+
+twitter:title
+
+Not Provided
+
+A title for Twitter link previews with 70 characters max. og:title is used as a fallback.
+
+
+<meta property="twitter:title" content="Twitter link preview title">
+twitter:description
+
+Not Provided
+
+A description for Twitter link previews with 200 characters max. og:description is used as a fallback.
+
+
+<meta property="twitter:description" content="Twitter link preview description">
+title
+
+Not Provided
+
+A title for the browser.
+
+
+<title>Browser title</title>
+description
+
+Not Provided
+
+A one to two sentence description for search engines.
+
+
+<meta property="description" content="Search engine description" />
+og:image
+
+https://ne-fa.vercel.app//images/IMG_9676.jpg
+
+og:site_name
+
+Not Provided
+
+A site name for link previews.
+
+
+<meta property="og:site_name" content="Link preview site name">
+og:title
+
+稿
+
+og:description
+
+不足。
+
+og:url
+
+https://ne-fa.vercel.app/posts/026_ww
+
+
+
+
+
+
+
 ![Alt text](/images/hig_1.jpg)
 
 ヒガンバナ。

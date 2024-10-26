@@ -129,7 +129,13 @@ export default function Home({ allPostsData, allPosts, allTags }) {
           </Container>
         </Grid>
 
-        
+
+{/*////////////////*/}
+
+<Giscus />
+
+
+{/*////////////////*/}        
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -170,12 +176,6 @@ const Giscus = dynamic(() => import("@/app/giscus").then((m) => m.Giscus), {
   ssr: false,
 });
 
-export default function Home() {
-  return (
-    <main>
-      <Giscus />
-    </main>
-  );
-}
+
 
 
