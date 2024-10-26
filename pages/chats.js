@@ -104,7 +104,7 @@ export default function Home() {
       </Head>
 
       <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js' />
-      
+
       <main className={styles.app}>
         <div className={styles.appContent}>
           <Members members={members} me={me}/>

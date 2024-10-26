@@ -42,7 +42,7 @@ function Header(props) {
               color: "inherit",
               fontStyle: "bold",
               flexGrow: 1,
-              fontSize: 48,
+              fontSize: 40,
               textDecoration: 'none'
             }}>
             Nakazuba
