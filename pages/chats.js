@@ -64,7 +64,7 @@ export default function Home() {
     });
     room.on('history_message', message => console.log(message));
 
-//rireki 
+    //rireki 
 
     room.on('message', message => {
       const {data, member} = message;
