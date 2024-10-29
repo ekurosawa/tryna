@@ -106,7 +106,7 @@ export default function Home() {
         <title>Scaledrone Chat App</title>
         <meta name='description' content='Your brand-new chat app!' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        
+        <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 

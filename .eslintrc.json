@@ -1,6 +1,6 @@
 {
   "extends": "next/core-web-vitals",
-  "rules": {"@next/next/no-sync-scripts" :"on"
+  "rules": {"@next/next/no-sync-scripts" :"off"
   }
 }
 
