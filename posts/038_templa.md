@@ -1,7 +1,7 @@
 ---
 title: "向行"
 year: ["2024"]
-date: "3624.10.30"
+date: "3624.10.28"
 writer: "英 世志香"
 thumbNa: /images/IMG_8517.jpg
 description: "「結局のところ、"
