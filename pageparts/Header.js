@@ -62,8 +62,6 @@ function Header(props) {
 
 
 
-          {/* 
-
           <Link
             href="/chats"
             sx={{
@@ -77,6 +75,8 @@ function Header(props) {
           </Link>
           
 
+
+          {/* 
 
           <Link
             href="/writers"

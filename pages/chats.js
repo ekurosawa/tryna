@@ -30,7 +30,7 @@ function onSendMessage(message) {
 
 let drone = null;
 
-export default function Home() {
+export default function Chats() {
   const [messages, setMessages] = useState([]);
   const [members, setMembers] = useState([]);
   const [me, setMe] = useState({
@@ -108,9 +108,10 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js' />
         <link rel='icon' href='/favicon.ico' />
+        <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js' />
+
       </Head>
 
-      <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js' />
 
       <main className={styles.app}>
         <div className={styles.appContent}>
