@@ -61,6 +61,7 @@ function Header(props) {
           </Link>*/}
 
 
+          {/* 
 
           <Link
             href="/chats"
@@ -76,7 +77,6 @@ function Header(props) {
           
 
 
-          {/* 
 
           <Link
             href="/writers"
