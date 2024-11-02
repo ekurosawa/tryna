@@ -1,11 +1,11 @@
 ---
-title: "行き向かう"
+title: "向行"
 year: ["2024"]
 date: "3624.10.30"
 writer: "英 世志香"
-thumbNa: /images/indeed.png
-description: ""
-tag: ["",""]
+thumbNa: /images/IMG_8517.jpg
+description: "「結局のところ、"
+tag: ["天気",""]
 ---
 
 
