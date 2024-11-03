@@ -61,10 +61,10 @@ function Header(props) {
           </Link>*/}
 
 
-          {/* 
+      
 
           <Link
-            href="/chats"
+            href="/supabaseComm"
             sx={{
               variant: "button",
               color: "#ffffff",
@@ -76,7 +76,7 @@ function Header(props) {
           </Link>
           
 
-
+    {/* 
 
           <Link
             href="/writers"
