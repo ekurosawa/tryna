@@ -100,7 +100,7 @@ const Page = () => {
                   <TextField
                     fullWidth
                     multiline
-                    minRows="5"
+                    minRows="4"
                     label="コメント"
                     variant="outlined"
                     color="secondary"
@@ -121,10 +121,14 @@ const Page = () => {
                 <p>コメントを読み込んでいます...</p>
               ) : (
                 <div>
+                  
                   {comments.map((comment) => (
                     <Card
-                      key={comment.id} style={{ border: '1px solid #ccc', padding: '10px', margin: '10px 0' }}>
-                      <p>{comment.content}</p>
+                    multiline
+                    display="flex"
+                      key={comment.id} 
+                      style={{ border: '1px solid #ccc', padding: '10px', margin: '10px 0' }}>
+                      {comment.content}
                     </Card>
                   ))}
                 </div>
