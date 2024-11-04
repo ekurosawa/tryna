@@ -101,12 +101,12 @@ const Page = () => {
                     fullWidth
                     multiline
                     minRows="5"
-                    label=""
+                    label="コメント"
                     variant="outlined"
                     color="secondary"
                     value={comment}
                     onChange={e => setComment(e.target.value)}
-                    placeholder="コメントを書く..."
+                    placeholder="Enterで改行"
                   />
                   <Button
                   sx={{mt: 1}}
