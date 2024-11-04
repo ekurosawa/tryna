@@ -53,6 +53,7 @@
     "postcss": "^8",
     "react-instantsearch-dom": "^6.40.4",
     "remove-markdown": "^0.5.0",
+    "supabase": "^1.207.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

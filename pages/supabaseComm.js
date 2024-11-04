@@ -52,16 +52,18 @@ const Page = () => {
 
   return (
     <div>
+      
       <h1>Comments</h1>
       <form onSubmit={handleCommentSubmit}>
         <textarea
           value={comment}
-          onChange={e => setComment(e.target.value)}
+          onChange={function(e) { setComment(e.target.value); }}
           placeholder="Write a comment..."
         />
         <button type="submit">Post Comment</button>
       </form>
       <div>
+        
         {comments.map((comment) => (
           <div key={comment.id} style={{ border: '1px solid #ccc', padding: '10px', margin: '10px 0' }}>
             <p>{comment.content}</p>
