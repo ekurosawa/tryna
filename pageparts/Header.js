@@ -64,7 +64,7 @@ function Header(props) {
       
 
           <Link
-            href="/supabaseComm"
+            href="/Comment"
             sx={{
               variant: "button",
               color: "#ffffff",

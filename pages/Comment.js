@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import supabase from '../components/supabaseClient';
 
 // No direct equivalent in JavaScript for interfaces, but you can use a constructor function or a class to create a similar structure.
-function Comment(id, content, createdAt) {
+ function Comment(id, content, createdAt) {
     this.id = id;
     this.content = content;
     this.created_at = createdAt;
@@ -55,9 +55,9 @@ const Page = () => {
       
       <h1>Comments</h1>
       <form onSubmit={handleCommentSubmit}>
-        <textarea
+        <textarea        
           value={comment}
-          onChange={function(e) { setComment(e.target.value); }}
+          onChange={(e) => { setComment(e.target.value)}}
           placeholder="Write a comment..."
         />
         <button type="submit">Post Comment</button>
