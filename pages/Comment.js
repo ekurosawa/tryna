@@ -100,7 +100,7 @@ const Page = () => {
                   <TextField
                     fullWidth
                     multiline
-                    minRows="4"
+                    minRows="2"
                     label="コメント"
                     variant="outlined"
                     color="secondary"
