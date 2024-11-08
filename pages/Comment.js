@@ -122,7 +122,7 @@ const Page = () => {
               ) : (
                 <div>
                   
-                  {reverseArr.comments.map((comment) => (
+                  {comments.map((comment) => (
                     <Card
                     multiline
                     display="flex"
